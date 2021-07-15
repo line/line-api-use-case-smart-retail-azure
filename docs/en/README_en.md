@@ -1,5 +1,5 @@
 # Overview
-This is the demo application source code for [Smart Retail](https://lineapiusecase.com/en/usecase/smartretail. html) provided on the [LINE API Use Case site](https://lineapiusecase.com/en/top.html). html) provided on the [LINE API Use Case site]().    
+This is the demo application source code for [Smart Retail](https://lineapiusecase.com/en/usecase/smartretail.html) provided on the [LINE API Use Case site](https://lineapiusecase.com/en/top.html). html) provided on the [LINE API Use Case site]().    
 By referring to the steps described in this article, you can develop a smart retail application that utilizes the LINE API.   
 With the smart retail application, users can purchase products and make payments on the LINE application. Since the users themselves perform the checkout process, it also reduces the workload of stores and store staff.   
 Furthermore, after the payment is made, the user ID obtained from the LIFF application can be used to send promotional messages via LINE.
