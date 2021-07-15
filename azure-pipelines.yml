@@ -1,0 +1,24 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+    submodules: true
+
+  - script: |
+      sed -i "s@LIFF_ID=.*@LIFF_ID=${LIFF_ID}@g" frontend/.env
+      sed -i "s@BASE_URL=.*@BASE_URL=https://${BASE_HOSTNAME}@g" frontend/.env
+    env:
+      LIFF_ID: $(LIFF_ID)
+      BASE_HOSTNAME: $(BASE_HOSTNAME)
+
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: "/frontend" 
+      api_location: "/backend"
+      output_location: "dist"
+    env:
+      azure_static_web_apps_api_token: $(deployment_token)
